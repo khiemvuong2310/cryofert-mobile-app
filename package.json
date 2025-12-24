@@ -1,7 +1,7 @@
 {
   "name": "cryofert",
   "private": true,
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "A comprehensive fertility clinic and cryobank management system designed to streamline patient care, sample tracking, and clinical workflows.",
   "type": "module",
   "scripts": {
@@ -21,6 +21,7 @@
     "@capacitor/app": "^8.0.0",
     "@capacitor/clipboard": "^8.0.0",
     "@capacitor/core": "^8.0.0",
+    "@capacitor/file-transfer": "^2.0.0",
     "@capacitor/filesystem": "^8.0.0",
     "@capacitor/haptics": "^8.0.0",
     "@capacitor/inappbrowser": "^2.5.3",

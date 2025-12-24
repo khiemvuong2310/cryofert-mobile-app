@@ -26,6 +26,9 @@ importers:
       '@capacitor/core':
         specifier: ^8.0.0
         version: 8.0.0
+      '@capacitor/file-transfer':
+        specifier: ^2.0.0
+        version: 2.0.0(@capacitor/core@8.0.0)
       '@capacitor/filesystem':
         specifier: ^8.0.0
         version: 8.0.0(@capacitor/core@8.0.0)
@@ -722,6 +725,11 @@ packages:
 
   '@capacitor/core@8.0.0':
     resolution: {integrity: sha512-250HTVd/W/KdMygoqaedisvNbHbpbQTN2Hy/8ZYGm1nAqE0Fx7sGss4l0nDg33STxEdDhtVRoL2fIaaiukKseA==}
+
+  '@capacitor/file-transfer@2.0.0':
+    resolution: {integrity: sha512-v0lV5W8JOD+FoT2x41OLoCrrvPqr924ZuhNaazPr7nd9YwKdmbBvmukmyFR7T6lYCSWkprR35RAGARhCy1Vpcg==}
+    peerDependencies:
+      '@capacitor/core': '>=8.0.0'
 
   '@capacitor/filesystem@8.0.0':
     resolution: {integrity: sha512-RRGNLW9xEqvVVHGyGlfS4Oy0R3Na+bEefwZElKbex22S9eZr5cg8wc750BPPVwbcv5lf5fJymkY8x8y6UwKPyg==}
@@ -3261,6 +3269,11 @@ snapshots:
   '@capacitor/core@8.0.0':
     dependencies:
       tslib: 2.8.1
+
+  '@capacitor/file-transfer@2.0.0(@capacitor/core@8.0.0)':
+    dependencies:
+      '@capacitor/core': 8.0.0
+      '@capacitor/synapse': 1.0.4
 
   '@capacitor/filesystem@8.0.0(@capacitor/core@8.0.0)':
     dependencies:
