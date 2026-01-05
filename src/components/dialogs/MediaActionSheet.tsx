@@ -25,7 +25,9 @@ export default function MediaActionSheet({
   const openGenericDialog = useGenericDialogStore((s) => s.openGenericDialog);
 
   const [pdfViewerIsOpen, setPdfViewerIsOpen] = useState(false);
-  const [viewerFileUrl, setViewerFileUrl] = useState<string | undefined>(undefined);
+  const [viewerFileUrl, setViewerFileUrl] = useState<string | undefined>(
+    undefined
+  );
   const [viewerTitle, setViewerTitle] = useState<string | undefined>(undefined);
   const [isDownloading, setIsDownloading] = useState(false);
   const [downloadProgress, setDownloadProgress] = useState<number | null>(null);
@@ -58,7 +60,7 @@ export default function MediaActionSheet({
       svgIconColor: "warning",
     });
     onClose();
-  };
+  }
 
   async function handleDownload(target: MediaResponse | null) {
     if (!target) return onClose();
@@ -73,14 +75,16 @@ export default function MediaActionSheet({
     }
 
     const fileUrl = target.filePath;
-    const fileName = target.originalFileName || target.fileName || "downloaded-file";
+    const fileName =
+      target.originalFileName || target.fileName || "downloaded-file";
 
     // Ensure filesystem permissions are granted
     const hasPermission = await ensureFsPerm();
     if (!hasPermission) {
       openGenericDialog({
         title: "Permission denied",
-        content: "Filesystem access is required to download files. Please grant permission in your device settings.",
+        content:
+          "Filesystem access is required to download files. Please grant permission in your device settings.",
         svgIconColor: "danger",
       });
       onClose();
@@ -139,7 +143,7 @@ export default function MediaActionSheet({
 
       onClose();
     }
-  };
+  }
 
   const header = media?.originalFileName ?? "Media";
 
