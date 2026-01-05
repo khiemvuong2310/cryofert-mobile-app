@@ -110,7 +110,7 @@ export default function AppointmentDetail() {
         </IonToolbar>
       </IonHeader>
 
-      <IonContent scrollY={false}>
+      <IonContent scrollY={false} id="appointment-detail-content">
         <div className="bg-blue-100 flex flex-col h-full">
           {isLoading ? (
             <ContentSpinnerOverlay />
